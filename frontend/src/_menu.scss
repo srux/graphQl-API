@@ -1,0 +1,173 @@
+.nav {
+    ul {
+        display: none;
+    }
+}
+
+.nav-tgl {
+    display: inline-block;
+    cursor: pointer;
+    width: 4em;
+    height: 4em;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    background: #fff;
+    // box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.24);
+    line-height: 0.6;
+    text-align: center;
+    z-index: 100;
+    // position: absolute;
+
+    // making the dividers
+    > span {
+        // the second divider
+        display: inline-block;
+        position: relative;
+        height: 2px;
+        width: 34px;
+        border-radius: 1px;
+        background: #293335;
+        vertical-align: middle;
+
+        // the first & the third dividers
+        &:after,
+        &:before {
+            display: inline-block;
+            position: absolute;
+            content: "";
+            height: 2px;
+            border-radius: 1px;
+            background: #293335;
+            // for the hover state
+            transition: all 200ms;
+        }
+        &:before {
+            top: -11px;
+            left: 3px;
+            width: 28px;
+        }
+        &:after {
+            top: 11px;
+            left: 6px;
+            width: 22px;
+        }
+    }
+
+    // ofcorse we should find a replacement for the focus state but it's not our topic
+    &:focus {
+        outline: none;
+    }
+
+    &:hover > span:after,
+    &:hover > span:before {
+        width: 34px;
+        left: 0;
+    }
+}
+
+// for the nav background (styling the nav itself is not our topic)
+.nav:before {
+    //   display: block;
+    //   position: fixed;
+    //   top: 0;
+    //   left: 0;
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    background: #2a9792;
+    transition: all 500ms ease-in-out;
+
+    // that's all the pen about
+    clip-path: circle(30px at calc(100% - 2.6em) 2.6em);
+    // for AT
+    visibility: hidden;
+}
+
+
+.menu {
+    position: absolute;
+    display: flex;
+    margin-left: -1em;
+    margin-top: -4.3em;
+    justify-content: flex-end;
+}
+// when it gits activated
+.menu.true {
+    .nav:before {
+        visibility: visible;
+
+        // that's all the pen about
+        clip-path: circle(100%);
+    }
+
+    .nav-tgl > span {
+        height: 0;
+        &:after,
+        &:before {
+            top: 0;
+            left: 0;
+            width: 34px;
+        }
+        &:after {
+            transform: rotate(-45deg);
+        }
+        &:before {
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.nav:before {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 20em;
+    height: 40em;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.main-menu.true {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20em;
+    height: 40em;
+    padding: 1em;
+    border-radius: 1em;
+    opacity: 1;
+    a {
+        padding: 1em;
+        color: #ffffff;
+        font-size: 1.5em;
+    }
+}
+
+.main-menu.false {
+    // display:none;
+	opacity: 0;
+	a {
+        padding: 1em;
+        color: #35b6b0;
+        font-size: 1.5em;
+    }
+}
+
+.menu.false {
+    height: 0;
+}
+
+img.menu-burger {
+    width: 2.5em;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+	align-items: center;
+}

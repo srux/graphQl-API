@@ -1,0 +1,272 @@
+a {
+  color: #35b6b0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.nav-container {
+  width: 100%;
+}
+
+.menu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav ul {
+  display: none;
+}
+
+.nav-tgl {
+  display: inline-block;
+  cursor: pointer;
+  width: 4em;
+  height: 4em;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  background: #fff;
+  line-height: 0.6;
+  text-align: center;
+  z-index: 100;
+}
+
+.nav-tgl > span {
+  display: inline-block;
+  position: relative;
+  height: 2px;
+  width: 34px;
+  border-radius: 1px;
+  background: #293335;
+  vertical-align: middle;
+}
+
+.nav-tgl > span:after, .nav-tgl > span:before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  height: 2px;
+  border-radius: 1px;
+  background: #293335;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.nav-tgl > span:before {
+  top: -11px;
+  left: 3px;
+  width: 28px;
+}
+
+.nav-tgl > span:after {
+  top: 11px;
+  left: 6px;
+  width: 22px;
+}
+
+.nav-tgl:focus {
+  outline: none;
+}
+
+.nav-tgl:hover > span:after,
+.nav-tgl:hover > span:before {
+  width: 34px;
+  left: 0;
+}
+
+.nav:before {
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  background: #2a9792;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  -webkit-clip-path: circle(30px at calc(100% - 2.6em) 2.6em);
+          clip-path: circle(30px at calc(100% - 2.6em) 2.6em);
+  visibility: hidden;
+}
+
+.menu {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -1em;
+  margin-top: -4.3em;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.menu.true .nav:before {
+  visibility: visible;
+  -webkit-clip-path: circle(100%);
+          clip-path: circle(100%);
+}
+
+.menu.true .nav-tgl > span {
+  height: 0;
+}
+
+.menu.true .nav-tgl > span:after, .menu.true .nav-tgl > span:before {
+  top: 0;
+  left: 0;
+  width: 34px;
+}
+
+.menu.true .nav-tgl > span:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.menu.true .nav-tgl > span:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.nav:before {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 20em;
+  height: 40em;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.main-menu.true {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20em;
+  height: 40em;
+  padding: 1em;
+  border-radius: 1em;
+  opacity: 1;
+}
+
+.main-menu.true a {
+  padding: 1em;
+  color: #ffffff;
+  font-size: 1.5em;
+}
+
+.main-menu.false {
+  opacity: 0;
+}
+
+.main-menu.false a {
+  padding: 1em;
+  color: #35b6b0;
+  font-size: 1.5em;
+}
+
+.menu.false {
+  height: 0;
+}
+
+img.menu-burger {
+  width: 2.5em;
+}
+
+.nav-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 20em;
+  height: 40em;
+  padding: 1em;
+  border-radius: 1em;
+  -webkit-box-shadow: 0.1em 0em 1.5em rgba(0, 0, 0, 0.178);
+          box-shadow: 0.1em 0em 1.5em rgba(0, 0, 0, 0.178);
+  background-image: url("./assets/h-waves.png");
+}
+
+.menu-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 4em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.logo {
+  width: 6em;
+}
+/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,54 @@
+a {
+    color: #35b6b0;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.nav-container {
+    width: 100%;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-between;
+}
+
+@import "_menu.scss";
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 20em;
+    height: 40em;
+    padding:1em;
+    border-radius: 1em;
+    box-shadow: .1em 0em 1.5em rgba(0, 0, 0, 0.178);
+    background-image:url('./assets/h-waves.png');
+}
+
+.menu-header {
+    display:flex;
+    flex-direction: row;
+    height: 4em;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 6em;
+}
+
+
