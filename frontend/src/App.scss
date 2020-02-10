@@ -25,6 +25,7 @@ a {
 }
 
 @import "_menu.scss";
+@import "_auth.scss";
 
 .wrap {
     display: flex;
@@ -37,6 +38,11 @@ a {
     border-radius: 1em;
     box-shadow: .1em 0em 1.5em rgba(0, 0, 0, 0.178);
     background-image:url('./assets/h-waves.png');
+}
+
+.section {
+    width:100%;
+    height:100%;
 }
 
 .menu-header {
@@ -52,3 +58,8 @@ a {
 }
 
 
+//interation
+
+.button {
+    cursor: pointer;
+}

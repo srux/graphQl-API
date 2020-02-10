@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {NavLink} from 'react-router-dom';
-
 
 const MainNav = (props) => {
 
@@ -13,22 +12,25 @@ const MainNav = (props) => {
         <div className="nav-container">
             <div className="nav-header">
                 <img className="logo" src={require("../../assets/evibe-logo.svg")} alt="logo"/>
-                    <button className="nav-tgl" onClick={toggleTrueFalse}>
-                    <img className="menu-burger" src={require("../../assets/menu-burger.svg")} alt=""/>
-                    </button>
-               
+                <button className="nav-tgl" onClick={toggleTrueFalse}>
+                    <img
+                        className="menu-burger"
+                        src={require("../../assets/menu-burger.svg")}
+                        alt=""/>
+                </button>
+
             </div>
             <div className="menu-container">
-                
-                <div className={"menu "+isToggled}>
 
-                        <div className="nav">
-                            <div className={"main-menu "+isToggled}>
-                                    <NavLink onClick={toggleTrueFalse} to={'/auth'}>Authentication</NavLink>
-                                    <NavLink onClick={toggleTrueFalse} to={'/events'}>Events</NavLink>
-                                    <NavLink onClick={toggleTrueFalse} to={'/bookings'}>Bookings</NavLink>
-                            </div>
+                <div className={"menu " + isToggled}>
+
+                    <div className="nav">
+                        <div className={"main-menu " + isToggled}>
+                            <NavLink onClick={toggleTrueFalse} to={'/auth'}>Login / Signup</NavLink>
+                            <NavLink onClick={toggleTrueFalse} to={'/events'}>Events</NavLink>
+                            <NavLink onClick={toggleTrueFalse} to={'/bookings'}>Bookings</NavLink>
                         </div>
+                    </div>
                 </div>
 
             </div>
