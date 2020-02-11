@@ -25,7 +25,7 @@ class Footer extends Component {
                             <div className="footer">
                              
                             {context.token && (
-                            <NavLink className="logout" onClick={context.logout} to={'/auth'}>Logout</NavLink>)}
+                            <NavLink className="button logout" onClick={context.logout} to={'/auth'}>Logout</NavLink>)}
                         </div>
                     </div>
                     )

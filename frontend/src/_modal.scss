@@ -1,0 +1,29 @@
+.modal {
+    width: 18em;
+    margin: 1em;
+    padding: 1em;
+    max-width: 90%;
+    background-color: white;
+    box-shadow: 0 0 0.7em rgba(0, 0, 0, 0.205);
+    position: fixed;
+    top: 20%;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    border-radius:1em;
+}
+
+.modal__actions {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+.modal__content {
+   form {
+        .form-control {
+            width:100%;
+        }
+   } 
+}

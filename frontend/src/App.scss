@@ -4,6 +4,15 @@ a {
     font-weight: 600;
 }
 
+ul {
+    margin:0;
+    padding:.5em;
+}
+
+li {
+    padding:.5em;
+}
+
 
 #root {
     display: flex;
@@ -26,6 +35,7 @@ a {
 
 @import "_menu.scss";
 @import "_auth.scss";
+@import "_modal.scss";
 @import "_footer.scss";
 
 .wrap {
@@ -40,6 +50,8 @@ a {
     box-shadow: .1em 0em 1.5em rgba(0, 0, 0, 0.178);
     background-image:url('./assets/h-waves.png');
 }
+
+//layout
 
 .section {
     width:100%;
@@ -67,11 +79,77 @@ a {
     z-index: 9;
 }
 
+.events-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 90%;
+
+    align-items:center;
+    height:100%;
+    .button {
+        width: 30%;
+        text-align:center;
+    }
+}
+.event-item {
+    display:flex;
+    flex-direction: column;
+
+    span {
+        padding:.2em;
+    }
+}
+//form layouts
+
+.form-control {
+    padding: .4em;
+    display: flex;
+    flex-direction: column;
+    width:70%;
+    input {
+        border-radius: .4em;
+        border:solid thin #cdcdcd;
+        padding:.7em;
+    }
+    textarea {
+        border-radius: .4em;
+        border:solid thin #cdcdcd;
+        padding:.7em;
+    }
+}
+
+.form-actions {
+    display:flex;
+    flex-direction: column;
+    width:70%;
+    button {
+        padding:.7em;
+        margin:.4em 0em;
+        border-radius:.4em;
+        background-color:#35b6b0;
+        color:white;
+        border:none;
+    }
+}
+
 
 //interation
 
+
 .button {
     cursor: pointer;
+    padding:.5em 1em;
+    padding-bottom:.7em;
+    background-color:white;
+    border-radius: .5em;
+    box-shadow: 0em 0em .7em rgba(0, 0, 0, 0.13);
+    transition:ease all .5s;
+}
+
+.button:hover {
+    background-color:#35b6b0;
+    color:white;
+    box-shadow: 0em 0em 1em rgba(0, 0, 0, 0.13);
 }
 
 

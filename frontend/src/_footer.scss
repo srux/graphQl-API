@@ -7,8 +7,8 @@
     justify-content: center;
 }
 
-.logout {
-    padding:.5em;
+.button {
+    padding:.5em 1em;
     padding-bottom:.7em;
     background-color:white;
     border-radius: .5em;
@@ -16,7 +16,7 @@
     transition:ease all .5s;
 }
 
-.logout:hover {
+.button:hover {
     background-color:#35b6b0;
     color:white;
     box-shadow: 0em 0em 1em rgba(0, 0, 0, 0.13);
