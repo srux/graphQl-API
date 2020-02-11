@@ -6,38 +6,12 @@ class Events extends Component {
 
     }
 
-    // componentWillMount() {
 
-    // }
-
-    // componentDidMount() {
-
-    // }
-
-    // componentWillReceiveProps(nextProps) {
-
-    // }
-
-    // shouldComponentUpdate(nextProps, nextState) {
-
-    // }
-
-    // componentWillUpdate(nextProps, nextState) {
-
-    // }
-
-    // componentDidUpdate(prevProps, prevState) {
-
-    // }
-
-    // componentWillUnmount() {
-
-    // }
 
     render() {
         return (
-            <div>
-                <h1>This IS Events</h1>
+            <div className="section">
+                <h1>Events</h1>
             </div>
         )
     }

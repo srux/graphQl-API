@@ -1,3 +1,11 @@
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em 1em;
+    width: 20em;
+}
+
 .nav {
     ul {
         display: none;
@@ -79,7 +87,7 @@
     transition: all 500ms ease-in-out;
 
     // that's all the pen about
-    clip-path: circle(30px at calc(100% - 2.6em) 2.6em);
+    clip-path: circle(30px at calc(100% - 2.6em) 2.2em);
     // for AT
     visibility: hidden;
 }
@@ -124,10 +132,12 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 20em;
-    height: 40em;
-    padding: 1em;
+    width: 22em;
+    height: 42em;
+    padding: 0em;
     border-radius: 1em;
+    margin-left:1em;
+
 }
 
 .main-menu.true {
@@ -136,10 +146,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 20em;
-    height: 40em;
-    padding: 1em;
+    width: 22em;
+    height: 42em;
+    padding: 0em;
     border-radius: 1em;
+    margin-left:1em;
+
     opacity: 1;
     a {
         padding: 1em;
@@ -149,7 +161,7 @@
 }
 
 .main-menu.false {
-    // display:none;
+    display:none;
 	opacity: 0;
 	a {
         padding: 1em;
@@ -166,8 +178,4 @@ img.menu-burger {
     width: 2.5em;
 }
 
-.nav-header {
-    display: flex;
-    justify-content: space-between;
-	align-items: center;
-}
+

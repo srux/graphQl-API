@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 
 // modules
@@ -10,22 +10,56 @@ import Bookings from './pages/Bookings';
 import Events from './pages/Events';
 
 // components
-import MainNav from './components/navigation/Main-nav';
+import Header from './components/navigation/Header';
+import Footer from './components/Footer';
+import AuthContext from './context/auth-context';
 
-function App() {
-  return (
-      <BrowserRouter>
-        <div className="wrap">
-            <MainNav/>
-            <Switch>
-              <Redirect path="/" to="/auth" exact />
+class App extends Component {
+  state = {
+    token:null,
+    userId:null
+  }
+
+  login = (token,userId,tokenExpiration) => {
+    this.setState({token:token,userId:userId});
+  }
+  logout = () => {
+    this.setState({token:null,userId:null})
+  }
+
+
+  render() {
+    return (
+        <BrowserRouter>
+          <AuthContext.Provider 
+            value={{
+                token:this.state.token, 
+                userId:this.state.userId,
+                login:this.login,
+                logout:this.logout
+                }}
+              >
+          <div className="wrap">
+              <Header/>
+              <Switch>
+                {!this.state.token && <Redirect from="/" to="/events" exact />}
+                {this.state.token && <Redirect from="/" to="/events" exact />}
+                {this.state.token && <Redirect from="/auth" to="/events" exact />}
+                {!this.state.token && <Redirect from="/bookings" to="/auth" exact />}
+
+                {!this.state.token && (
                 <Route path="/auth" component={Auth}/>
+                )}
                 <Route path="/events" component={Events}/>
-                <Route path="/bookings" component={Bookings}/>
-            </Switch>
-          </div>
-      </BrowserRouter>
-  );
+                {this.state.token && (
+                <Route path="/bookings" component={Bookings}/>)}
+                </Switch>
+                <Footer/>
+            </div>
+            </AuthContext.Provider>
+        </BrowserRouter>
+    );
+  }
 }
 
 export default App;

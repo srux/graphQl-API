@@ -1,0 +1,23 @@
+.footer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 4em;
+    justify-content: center;
+}
+
+.logout {
+    padding:.5em;
+    padding-bottom:.7em;
+    background-color:white;
+    border-radius: .5em;
+    box-shadow: 0em 0em .7em rgba(0, 0, 0, 0.13);
+    transition:ease all .5s;
+}
+
+.logout:hover {
+    background-color:#35b6b0;
+    color:white;
+    box-shadow: 0em 0em 1em rgba(0, 0, 0, 0.13);
+}

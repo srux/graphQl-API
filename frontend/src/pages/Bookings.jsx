@@ -37,8 +37,8 @@ class Bookings extends Component {
 
     render() {
         return (
-            <div>
-                <h1>This iS Bookings</h1>
+            <div className="section">
+                <h1>Bookings</h1>
             </div>
         )
     }
