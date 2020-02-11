@@ -85,7 +85,7 @@ class Auth extends Component {
     render() {
         return (
             <div className="section">
-                <div className="container">
+                <div className="container login">
                 <h1>        { this.state.isLogin
                                     ? 'Login'
                                     : 'Sign up'

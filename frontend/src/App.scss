@@ -66,6 +66,13 @@ li {
     }
 }
 
+.container.login {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height:29em;
+}
+
 .menu-header {
     display:flex;
     flex-direction: row;
@@ -99,6 +106,7 @@ li {
         padding:.2em;
     }
 }
+
 //form layouts
 
 .form-control {
@@ -134,7 +142,6 @@ li {
 
 
 //interation
-
 
 .button {
     cursor: pointer;

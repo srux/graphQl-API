@@ -369,6 +369,20 @@ h1.lp_hglt_cls_login {
   margin-top: 1em;
 }
 
+.container.login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 29em;
+}
+
 .menu-header {
   display: -webkit-box;
   display: -ms-flexbox;
